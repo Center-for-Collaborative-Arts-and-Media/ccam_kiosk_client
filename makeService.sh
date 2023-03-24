@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the name of the Docker Compose service you want to run at startup
-SERVICE_NAME="kiosk-web"
+SERVICE_NAME="frontend"
 
 # Set the path to the Docker Compose file
 COMPOSE_FILE_PATH="~/ccam_kiosk_client/docker-compose.yml"
