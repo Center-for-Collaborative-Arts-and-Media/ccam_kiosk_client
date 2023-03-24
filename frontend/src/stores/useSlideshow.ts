@@ -9,20 +9,20 @@ const useSlideshow = () => {
     media: {
       id: "djfiiue",
       videos: [
-        {
-          id: "djjfs783",
-          type: "video",
-          order: 1,
-          caption: "",
-          url: "https://mdn.github.io/dom-examples/canvas/chroma-keying/media/video.mp4",
-        },
-        {
-          id: "djjfs784",
-          type: "video",
-          order: 3,
-          caption: "",
-          url: "https://samplelib.com/lib/preview/mp4/sample-30s.mp4",
-        },
+        // {
+        //   id: "djjfs783",
+        //   type: "video",
+        //   order: 1,
+        //   caption: "",
+        //   url: "https://mdn.github.io/dom-examples/canvas/chroma-keying/media/video.mp4",
+        // },
+        // {
+        //   id: "djjfs784",
+        //   type: "video",
+        //   order: 3,
+        //   caption: "",
+        //   url: "https://samplelib.com/lib/preview/mp4/sample-30s.mp4",
+        // },
       ],
       images: [
         {
