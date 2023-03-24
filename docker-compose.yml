@@ -45,7 +45,7 @@ services:
         dockerfile: frontend/Dockerfile-prod
     restart: unless-stopped
     volumes:
-      - ./data:/app/data/
+      - ./data/media:/usr/share/caddy/media
       - ./Caddyfile:/etc/caddy/Caddyfile
     ports:
       - "80:80"
