@@ -12,6 +12,6 @@ func slideshowRoutes(router fiber.Router, db *gorm.DB) {
 	slideshowRepo := repository.NewSlidesRepository(db)
 	slideshowService := services.NewSlideshowService(slideshowRepo)
 	slideshowController := controller.NewSlideshowController(slideshowService)
-	playlist := router.Group("/playlist")
+	playlist := router.Group("/slideshow")
 	playlist.Get("/", slideshowController.GetSlides)
 }

@@ -43,8 +43,10 @@ services:
     build:
         context: .
         dockerfile: frontend/Dockerfile-prod
+    restart: unless-stopped
     volumes:
       - ./data:/app/data/
+      - ./Caddyfile:/etc/caddy/Caddyfile
     ports:
       - "80:80"
     depends_on:

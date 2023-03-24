@@ -7,7 +7,7 @@ RUN go mod download
 
 COPY api/ .
 
-RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o api .
+RUN GOOS=linux go build -a -installsuffix cgo -o api .
 
 EXPOSE 8080
 
