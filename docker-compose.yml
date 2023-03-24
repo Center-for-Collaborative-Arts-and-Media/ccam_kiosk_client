@@ -47,10 +47,23 @@ services:
     volumes:
       - ./data/media:/usr/share/caddy/media
       - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./data/certs:/etc/caddy/certs
     ports:
       - "80:80"
       - "443:443"
     depends_on:
+        - mkcert
         - api
     command: caddy run --config /etc/caddy/Caddyfile
+  mkcert:
+    image: vishnunair/docker-mkcert
+    container_name: mkcert
+    restart: always
+    environment:
+        domain: kiosk.local
+    volumes:
+      - ./data/certs:/root/.local/share/mkcert
+
+
+
 
