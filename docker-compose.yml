@@ -49,6 +49,7 @@ services:
       - ./Caddyfile:/etc/caddy/Caddyfile
     ports:
       - "80:80"
+      - "443:443"
     depends_on:
         - api
     command: caddy run --config /etc/caddy/Caddyfile
