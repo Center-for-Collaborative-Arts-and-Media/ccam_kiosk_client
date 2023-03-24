@@ -31,7 +31,7 @@ const useSlideshow = () => {
           order: 0,
           caption: "",
           url: "https://ccam.yale.edu/sites/default/files/styles/homepage_event_image/public/event-images/da482bf6-7a42-d9df-f619-cf8753fba624_4.png?itok=Kfp4wN_U",
-          duration: 2,
+          duration: 240,
         },
         {
           id: "djjfs784",
@@ -39,7 +39,7 @@ const useSlideshow = () => {
           order: 2,
           caption: "",
           url: "https://ccam.yale.edu/sites/default/files/styles/homepage_event_image/public/event-images/ae3976fa-cd3e-c9c5-b1d4-0a11266503ef.png?itok=RqK0MrQS",
-          duration: 2,
+          duration: 240,
         },
       ],
     },
