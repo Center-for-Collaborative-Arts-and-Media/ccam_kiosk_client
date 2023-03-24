@@ -43,7 +43,7 @@ services:
     build:
         context: .
         dockerfile: frontend/Dockerfile-prod
-    restart: unless-stopped
+    restart: always
     volumes:
       - ./data/media:/usr/share/caddy/media
       - ./Caddyfile:/etc/caddy/Caddyfile
@@ -58,7 +58,6 @@ services:
   mkcert:
     image: vishnunair/docker-mkcert
     container_name: mkcert
-    restart: always
     environment:
         domain: kiosk.local
     volumes:
