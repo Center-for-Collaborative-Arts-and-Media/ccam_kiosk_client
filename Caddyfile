@@ -3,7 +3,7 @@
 }
 
 kiosk.local {
-	tsl internal
+	tls internal
 
 	handle_path / {
 		root * /usr/share/caddy/
