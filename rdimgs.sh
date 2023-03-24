@@ -1,8 +1,6 @@
 #!/bin/bash
 
-docker stop $(docker ps -a -q)
-
-docker rm $(docker ps -a -q)
+docker compose down
 
 mkcert_image=$(docker images | grep mkcert | awk '{print $1}')
 
