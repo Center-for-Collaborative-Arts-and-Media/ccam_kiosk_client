@@ -1,0 +1,5 @@
+kiosk.local {
+      reverse_proxy /api/* api:3000
+      file_server /data/*
+      reverse_proxy / http://frontend
+}

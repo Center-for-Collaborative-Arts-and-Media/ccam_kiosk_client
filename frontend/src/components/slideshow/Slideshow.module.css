@@ -1,0 +1,39 @@
+.Slideshow {
+  width: 100vw;
+  height: 100vh;
+}
+
+.Slideshow__container {
+  width: inherit;
+  height: inherit;
+}
+
+.Slideshow__media {
+  width: inherit;
+  height: inherit;
+  position: relative;
+}
+
+.Slideshow__image {
+  width: inherit;
+  height: inherit;
+  display: grid;
+  place-content: center;
+}
+
+.Slideshow__image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.Slideshow__video {
+  width: inherit;
+  height: inherit;
+  display: grid;
+  place-content: center;
+}
+
+.Slideshow__video video {
+  width: 100%;
+  object-fit: cover;
+}

@@ -1,0 +1,19 @@
+:root {
+  --br: 1rem;
+  --fs: 5rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  font-size: var(--fs);
+  font-family: Helvetica, "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  padding: 0.1rem;
+  overflow: hidden;
+}

@@ -1,0 +1,53 @@
+version: "3"
+services:
+  api:
+    build:
+        context: .
+        dockerfile: api/Dockerfile-prod
+    environment:
+          - PORT=3000
+          - DB_NAME=kiosk
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data:/app/data/
+  api-dev:
+    build:
+        context: .
+        dockerfile: api/Dockerfile-dev
+    environment:
+          - PORT=3000
+          - DB_NAME=kiosk
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data:/app/data/
+      - ./api:/app
+    command: air run cmd/main.go -b 0.0.0.0
+  frontend-dev:
+    build:
+        context: .
+        dockerfile: frontend/Dockerfile-dev
+    volumes:
+      - ./frontend:/app
+    tty: true
+    ports:
+      - "3001:3001"
+    depends_on:
+      - api-dev
+    command:
+        - sh
+        - -c
+        - "npm rebuild esbuild && npm run dev"
+  frontend:
+    build:
+        context: .
+        dockerfile: frontend/Dockerfile-prod
+    volumes:
+      - ./data:/app/data/
+    ports:
+      - "80:80"
+    depends_on:
+        - api
+    command: caddy run --config /etc/caddy/Caddyfile
+
