@@ -3,7 +3,6 @@
 }
 
 kiosk.local {
-	tls internal
 	tls /etc/caddy/certs/kiosk.local.pem /etc/caddy/certs/kiosk.local-key.pem
 
 	handle_path / {
